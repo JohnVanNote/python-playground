@@ -39,9 +39,24 @@ def deep_iterate_options(char_list, length):
       options.append(char + option)
   return options
 
+
+def crack_password(possible_chars, max_password_length, actual_password):
+  """Cracks password"""
+  password = None
+  while max_password_length > 0:
+    if max_password_length < 1:
+      password = password_equality('', actual_password)
+  for i in possible_chars:
+    for j in possible_chars:
+      None
+
+
+
 def password_equality(password_attempt, password):
   """Password equality comparator"""
-  return password_attempt == password
+  if password_attempt == password:
+    return password_attempt
+  return None
 
 if __name__ == "__main__":
   main()

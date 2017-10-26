@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     vb.memory = "2048"
   end
 
-  config.vm.provision "init", type "shell", inline: <<-SHELL
+  config.vm.provision "init", type: "shell", inline: <<-SHELL
     apt-get update
     apt-get install -y vim
     apt-get install -y python
